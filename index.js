@@ -1,35 +1,37 @@
 function dwarfRollCall(dwarves) {
-  var line = []
-  for (let i = 0; i < dwarves.length; i++)
- line.push(`${i + 1}. ${dwarves[i]} `) 
- return line.join("")
+  let line = []
+  for (let i = dwarves.length/2; i < dwarves.length; i++) {
+    line.push(`${i + 1}. ${dwarves[i]} `)
+  }  return line.join("")
 }
 
 function summonCaptainPlanet(planeteerCalls){
-  let capitalize = []
+  let newCall = []
   for (let i = 0; i < planeteerCalls.length; i++) {
-    capitalize.push(`${planeteerCalls[i]}!`.toUpperCase())
-  } 
-  return capitalize
+    newCall.push(`${planeteerCalls[i]}!`.toUpperCase())
+  }return newCall
 }
 
 function longPlaneteerCalls(words) {
   for (let i = 0; i < words.length; i++) {
     if (words[i].length > 4) {
       return true
-    } return false
-  }
-}
-    
+    } 
+} return false
+} 
 
-function findTheCheese (foods) {
+function findTheCheese(foods) {
   for (let i = 0; i < foods.length; i++) {
-    if ("gouda" === foods[i]) {
-     return "gouda" 
-    } if ("cheddar" === foods[i]) {
-      return "cheddar"
-    } if ("camembert" === foods[i]) {
-      return "camembert"
+    if (foods[i] === "cheddar") {
+       return "cheddar"
+    } if (foods[i] === "gouda") {
+      return "gouda"
+    } if (foods[i] === "camembert") {
+      return "camembert" 
     }
   }return "no cheese!"
+}
+
+function wordsWithB() {
+  
 }
